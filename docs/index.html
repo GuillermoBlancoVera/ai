@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guillermo Blanco Vera | AI Portfolio</title>
+    <meta
+      name="description"
+      content="Personal AI portfolio with examples across classical machine learning, deep learning, and generative AI."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <span class="brand">Guillermo Blanco Vera</span>
+          <div class="topbar-links">
+            <a href="https://github.com/GuillermoBlancoVera/ai" target="_blank" rel="noreferrer">Repository</a>
+            <a href="https://github.com/GuillermoBlancoVera" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </nav>
+
+        <div class="hero-copy">
+          <p class="eyebrow">AI portfolio</p>
+          <h1>Machine learning, deep learning, and generative AI work in one interview-ready repository.</h1>
+          <p class="intro">
+            This site presents the portfolio behind my personal AI repository: a clean collection of runnable examples,
+            experiments, and implementation patterns across classical ML, neural networks, and LLM workflows.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/GuillermoBlancoVera/ai" target="_blank" rel="noreferrer">
+              View Repository
+            </a>
+            <a class="button button-secondary" href="#featured-work">Explore Examples</a>
+          </div>
+        </div>
+
+        <section class="hero-metrics" aria-label="Portfolio highlights">
+          <article>
+            <span class="metric-value">4</span>
+            <span class="metric-label">AI tracks</span>
+          </article>
+          <article>
+            <span class="metric-value">12+</span>
+            <span class="metric-label">core examples</span>
+          </article>
+          <article>
+            <span class="metric-value">Python</span>
+            <span class="metric-label">scripts first</span>
+          </article>
+        </section>
+      </header>
+
+      <main>
+        <section class="section" id="featured-work">
+          <div class="section-heading">
+            <p class="eyebrow">Featured work</p>
+            <h2>Examples grouped by problem type, not by buzzwords.</h2>
+          </div>
+
+          <div class="grid four-up">
+            <article class="panel">
+              <h3>Classical ML</h3>
+              <p>Structured-data baselines that show practical model selection and evaluation.</p>
+              <ul>
+                <li>KNN on Iris</li>
+                <li>Random Forest on Wine</li>
+                <li>Linear Regression on Diabetes</li>
+                <li>Random Forest Regressor on Diabetes</li>
+              </ul>
+            </article>
+
+            <article class="panel">
+              <h3>Unsupervised ML</h3>
+              <p>Pattern discovery and dimensionality reduction with interpretable small datasets.</p>
+              <ul>
+                <li>K-Means on Iris</li>
+                <li>PCA on Iris</li>
+                <li>DBSCAN on synthetic moons</li>
+              </ul>
+            </article>
+
+            <article class="panel">
+              <h3>Deep Learning</h3>
+              <p>PyTorch training loops for classification with clear, readable architecture choices.</p>
+              <ul>
+                <li>MNIST MLP</li>
+                <li>FashionMNIST CNN</li>
+              </ul>
+            </article>
+
+            <article class="panel">
+              <h3>Generative AI</h3>
+              <p>Modern LLM-focused examples that move beyond prompts into applied workflows.</p>
+              <ul>
+                <li>Text generation</li>
+                <li>Summarization</li>
+                <li>Simple RAG pipeline</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section split">
+          <div class="section-heading">
+            <p class="eyebrow">Approach</p>
+            <h2>Built to be reviewed quickly by hiring teams and discussed deeply in interviews.</h2>
+          </div>
+
+          <div class="grid two-up">
+            <article class="panel">
+              <h3>Why scripts first</h3>
+              <p>
+                The repository treats Python scripts as the main implementation layer so reviewers can inspect logic,
+                imports, model setup, and evaluation without notebook noise.
+              </p>
+            </article>
+
+            <article class="panel">
+              <h3>Where notebooks fit</h3>
+              <p>
+                Notebooks remain part of the structure for walkthroughs, visual diagnostics, and presentation-friendly
+                explorations that sit on top of the scripts.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Repository structure</p>
+            <h2>A small codebase with enough variety to show judgment, breadth, and execution.</h2>
+          </div>
+
+          <div class="repo-layout">
+            <div class="repo-column">
+              <span class="repo-label">Source</span>
+              <code>src/ai_portfolio/</code>
+              <p>Classical ML, unsupervised learning, deep learning, and generative AI modules.</p>
+            </div>
+            <div class="repo-column">
+              <span class="repo-label">Notebooks</span>
+              <code>notebooks/</code>
+              <p>Presentation-friendly companion notebooks grouped by topic.</p>
+            </div>
+            <div class="repo-column">
+              <span class="repo-label">Artifacts</span>
+              <code>data/ models/ reports/</code>
+              <p>Reserved space for datasets, trained weights, and figures as the portfolio grows.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section cta">
+          <div>
+            <p class="eyebrow">GitHub Pages</p>
+            <h2>This page can be published directly from the repository.</h2>
+            <p>
+              Once GitHub Pages is enabled for the `docs/` folder on `main`, this portfolio can be shared as a public
+              URL alongside the source code.
+            </p>
+          </div>
+
+          <a class="button button-primary" href="https://github.com/GuillermoBlancoVera/ai/settings/pages" target="_blank" rel="noreferrer">
+            Open Pages Settings
+          </a>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

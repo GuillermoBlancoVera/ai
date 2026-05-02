@@ -11,6 +11,16 @@ The goal is not to present toy notebooks in isolation, but to show a practical r
 
 Everything in this repository is written in English and organized to be easy to review during interviews, technical discussions, and portfolio walkthroughs.
 
+## Portfolio Site
+
+This repository also includes a lightweight static site in `docs/` for GitHub Pages.
+
+Once Pages is enabled for the `main` branch and the `/docs` folder, the portfolio can be shared at:
+
+```text
+https://guillermoblancovera.github.io/ai/
+```
+
 ## What This Repository Shows
 
 - Breadth across different AI paradigms
