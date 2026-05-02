@@ -6,5 +6,7 @@ pandas
 pytest
 scikit-learn
 seaborn
+sentencepiece
 torch
 torchvision
+transformers

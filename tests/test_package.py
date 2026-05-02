@@ -1,4 +1,4 @@
-from ia_learning import __version__
+from ai_portfolio import __version__
 
 
 def test_version_exists() -> None:

@@ -1,4 +1,4 @@
-"""Train a small neural network on MNIST with PyTorch."""
+"""Train a small CNN on FashionMNIST."""
 
 from pathlib import Path
 
@@ -8,23 +8,31 @@ from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 
 
-class MLP(nn.Module):
-    """A tiny multilayer perceptron for 28x28 grayscale images."""
+class SimpleCNN(nn.Module):
+    """Small convolutional network for FashionMNIST."""
 
     def __init__(self) -> None:
         super().__init__()
-        self.network = nn.Sequential(
+        self.features = nn.Sequential(
+            nn.Conv2d(1, 16, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(2),
+            nn.Conv2d(16, 32, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(2),
+        )
+        self.classifier = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(28 * 28, 128),
+            nn.Linear(32 * 7 * 7, 128),
             nn.ReLU(),
             nn.Linear(128, 10),
         )
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
-        return self.network(x)
+    def forward(self, inputs: torch.Tensor) -> torch.Tensor:
+        return self.classifier(self.features(inputs))
 
 
-def train_one_epoch(
+def train_epoch(
     model: nn.Module,
     loader: DataLoader,
     loss_fn: nn.Module,
@@ -38,8 +46,8 @@ def train_one_epoch(
         images = images.to(device)
         labels = labels.to(device)
 
-        predictions = model(images)
-        loss = loss_fn(predictions, labels)
+        logits = model(images)
+        loss = loss_fn(logits, labels)
 
         optimizer.zero_grad()
         loss.backward()
@@ -57,10 +65,8 @@ def evaluate(model: nn.Module, loader: DataLoader, device: torch.device) -> floa
 
     with torch.no_grad():
         for images, labels in loader:
-            images = images.to(device)
-            labels = labels.to(device)
-            predictions = model(images).argmax(dim=1)
-            correct += (predictions == labels).sum().item()
+            predictions = model(images.to(device)).argmax(dim=1)
+            correct += (predictions == labels.to(device)).sum().item()
             total += labels.size(0)
 
     return correct / total
@@ -71,25 +77,25 @@ def main() -> None:
     data_dir = Path("data/raw")
 
     transform = transforms.ToTensor()
-    train_dataset = datasets.MNIST(data_dir, train=True, download=True, transform=transform)
-    test_dataset = datasets.MNIST(data_dir, train=False, download=True, transform=transform)
+    train_dataset = datasets.FashionMNIST(data_dir, train=True, download=True, transform=transform)
+    test_dataset = datasets.FashionMNIST(data_dir, train=False, download=True, transform=transform)
 
     train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=256)
 
-    model = MLP().to(device)
+    model = SimpleCNN().to(device)
+    optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
     loss_fn = nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
-    print(f"Deep learning: MNIST MLP on {device}")
+    print(f"FashionMNIST CNN on {device}")
     for epoch in range(1, 4):
-        loss = train_one_epoch(model, train_loader, loss_fn, optimizer, device)
+        loss = train_epoch(model, train_loader, loss_fn, optimizer, device)
         accuracy = evaluate(model, test_loader, device)
         print(f"Epoch {epoch}: loss={loss:.4f}, test_accuracy={accuracy:.3f}")
 
     Path("models").mkdir(exist_ok=True)
-    torch.save(model.state_dict(), "models/mnist_mlp.pt")
-    print("Saved model to models/mnist_mlp.pt")
+    torch.save(model.state_dict(), "models/fashion_mnist_cnn.pt")
+    print("Saved model to models/fashion_mnist_cnn.pt")
 
 
 if __name__ == "__main__":

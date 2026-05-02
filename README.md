@@ -1,78 +1,84 @@
-# IA Learning Lab
+# AI Portfolio
 
-A hands-on repository for learning how to train AI models, starting with classic machine learning and growing into deep learning.
+This repository is my personal AI portfolio: a curated collection of machine learning, deep learning, and generative AI examples that I build, refine, and use as a public record of how I work.
 
-The goal is to build intuition by training small models, measuring them, changing one thing at a time, and keeping notes about what happened.
+The goal is not to present toy notebooks in isolation, but to show a practical range:
 
-## Learning Tracks
+- classical ML for structured data,
+- unsupervised learning for pattern discovery,
+- neural networks for vision tasks,
+- generative AI examples for modern LLM workflows.
 
-### 1. Supervised Learning
+Everything in this repository is written in English and organized to be easy to review during interviews, technical discussions, and portfolio walkthroughs.
 
-Use labeled examples to predict a known target.
+## What This Repository Shows
 
-Start with:
+- Breadth across different AI paradigms
+- Clean, runnable Python examples
+- Clear problem framing and evaluation
+- A mix of reusable scripts and notebook-ready structure
+- Interest in both traditional ML and modern generative AI
 
-- Regression: predict a number.
-- Classification: predict a category.
-- Evaluation: split data, measure error, inspect mistakes.
+## Featured Examples
 
-Starter script:
+### Classical Machine Learning
 
-```bash
-python -m ia_learning.supervised.train_iris_classifier
-```
+- `KNN` classification on Iris
+- `Random Forest` classification on Wine
+- `Linear Regression` on Diabetes
+- `Random Forest Regressor` on Diabetes
 
-### 2. Unsupervised Learning
+### Unsupervised Learning
 
-Find structure in data without labels.
+- `K-Means` clustering on Iris
+- `PCA` for dimensionality reduction and explained variance
+- `DBSCAN` on synthetic moon-shaped data
 
-Start with:
+### Deep Learning
 
-- Clustering: group similar examples.
-- Dimensionality reduction: compress features for visualization.
-- Evaluation: inspect patterns and compare cluster behavior.
+- `MLP` for MNIST digit classification
+- `CNN` for FashionMNIST image classification
 
-Starter script:
+### Generative AI
 
-```bash
-python -m ia_learning.unsupervised.cluster_iris
-```
-
-### 3. Deep Learning
-
-Train neural networks with tensors, gradients, and optimization loops.
-
-Start with:
-
-- Tensors and automatic differentiation.
-- A small neural network.
-- Training loops, validation, and overfitting.
-
-Starter script:
-
-```bash
-python -m ia_learning.deep_learning.train_mnist_mlp
-```
+- `Text generation` with Hugging Face Transformers
+- `Summarization` with sequence-to-sequence models
+- `Simple RAG pipeline` with TF-IDF retrieval plus local text generation
 
 ## Repository Structure
 
 ```text
 .
 ├── data/
-│   ├── raw/              # Original datasets, not edited by hand
-│   └── processed/        # Cleaned or transformed datasets
-├── models/               # Saved model artifacts
-├── notebooks/            # Experiments and study notes
+│   ├── raw/
+│   └── processed/
+├── models/
+├── notebooks/
+│   ├── classical_ml/
+│   ├── deep_learning/
+│   ├── generative_ai/
+│   └── unsupervised_ml/
 ├── reports/
-│   └── figures/          # Charts and exported visuals
+│   └── figures/
 ├── src/
-│   └── ia_learning/      # Reusable training code
-├── tests/                # Small checks for helper code
-├── requirements.txt      # Beginner-friendly dependencies
-└── pyproject.toml        # Project metadata and tooling
+│   └── ai_portfolio/
+│       ├── classical_ml/
+│       ├── deep_learning/
+│       ├── generative_ai/
+│       └── unsupervised_ml/
+├── tests/
+├── pyproject.toml
+└── requirements.txt
 ```
 
-## Setup
+## How I Use Scripts vs Notebooks
+
+- Scripts are the main source of truth for clean, reviewable implementations.
+- Notebooks are reserved for visual exploration, presentation, and interview walkthroughs.
+
+This keeps the repository maintainable while still making it easy to demonstrate ideas interactively.
+
+## Quick Start
 
 Create and activate a virtual environment:
 
@@ -89,26 +95,25 @@ python -m pip install -r requirements.txt
 python -m pip install -e .
 ```
 
-## Suggested Study Flow
+Run a few examples:
 
-1. Run one starter script exactly as provided.
-2. Read the printed metrics and comments.
-3. Change one parameter, such as model type, number of clusters, or learning rate.
-4. Run it again and record what changed.
-5. Move repeated logic from notebooks into `src/ia_learning`.
+```bash
+python -m ai_portfolio.classical_ml.knn_iris
+python -m ai_portfolio.classical_ml.random_forest_wine
+python -m ai_portfolio.unsupervised_ml.kmeans_iris
+python -m ai_portfolio.deep_learning.mnist_mlp
+python -m ai_portfolio.generative_ai.text_generation_hf
+```
 
-## Good Habits
+## Portfolio Notes
 
-- Keep raw data unchanged in `data/raw`.
-- Save generated datasets in `data/processed`.
-- Save trained models in `models`.
-- Track metrics before trusting a model.
-- Prefer small experiments over large mysterious training runs.
+- Classical ML examples use small built-in datasets so they are easy to run and review.
+- Deep learning and generative AI examples may download pretrained datasets or models the first time they run.
+- The repository is designed to grow over time as I add stronger end-to-end projects, evaluation experiments, and applied generative AI work.
 
-## Next Milestones
+## Next Additions
 
-- Add a first supervised regression exercise.
-- Add notebooks for each learning track.
-- Add plotting helpers for confusion matrices and clusters.
-- Add model saving and loading examples.
-- Add a notes file for experiment logs.
+- More end-to-end projects with real datasets
+- Model comparison reports and charts
+- Better experiment tracking
+- Retrieval, agents, and evaluation-focused generative AI examples

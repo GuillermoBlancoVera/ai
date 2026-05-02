@@ -3,12 +3,21 @@ requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ia-learning"
-version = "0.1.0"
-description = "A hands-on repository for learning supervised, unsupervised, and deep learning models."
+name = "ai-portfolio"
+version = "0.2.0"
+description = "A personal AI portfolio with classical ML, deep learning, and generative AI examples."
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "torch",
+    "torchvision",
+    "transformers",
+    "sentencepiece",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
