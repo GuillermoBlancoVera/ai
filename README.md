@@ -1,15 +1,18 @@
 # AI Portfolio
 
-This repository is my personal AI portfolio: a curated collection of machine learning, deep learning, and generative AI examples that I build, refine, and use as a public record of how I work.
+This repository is my personal AI portfolio and repository index: a curated collection of machine learning, deep learning, and generative AI examples that I build, refine, and use as a public record of how I work.
 
-The goal is not to present toy notebooks in isolation, but to show a practical range:
+The goal is twofold: to work as my carta de presentacion and to make it easy to understand what is inside the repo, where each example lives, and what each notebook is meant to demonstrate.
 
-- classical ML for structured data,
-- unsupervised learning for pattern discovery,
+The portfolio currently covers:
+
+- supervised learning notebooks for common scikit-learn models,
+- classical ML scripts for structured data,
+- unsupervised learning notebooks and scripts for pattern discovery,
 - neural networks for vision tasks,
 - generative AI examples for modern LLM workflows.
 
-Everything in this repository is written in English and organized to be easy to review during interviews, technical discussions, and portfolio walkthroughs.
+Everything in this repository is written in English and organized to be easy to navigate during technical reviews, project discussions, and portfolio walkthroughs.
 
 ## Portfolio Site
 
@@ -26,10 +29,22 @@ https://guillermoblancovera.github.io/ai/
 - Breadth across different AI paradigms
 - Clean, runnable Python examples
 - Clear problem framing and evaluation
-- A mix of reusable scripts and notebook-ready structure
+- A mix of reusable scripts and presentation-friendly notebooks
 - Interest in both traditional ML and modern generative AI
+- A practical index of what exists in the repository and where to find it
 
 ## Featured Examples
+
+### Supervised Learning Notebooks
+
+- `Linear Regression` on Diabetes
+- `Logistic Regression` on Breast Cancer
+- `Decision Tree` on Wine
+- `Random Forest` on Wine
+- `Support Vector Machine` on Breast Cancer
+- `Gradient Boosting` on Breast Cancer
+- `Naive Bayes` on Iris
+- `KNN` on Iris
 
 ### Classical Machine Learning
 
@@ -41,8 +56,12 @@ https://guillermoblancovera.github.io/ai/
 ### Unsupervised Learning
 
 - `K-Means` clustering on Iris
+- `Agglomerative Clustering` on Iris
+- `Gaussian Mixture Models` on Iris
 - `PCA` for dimensionality reduction and explained variance
+- `t-SNE` for digit visualization
 - `DBSCAN` on synthetic moon-shaped data
+- `Isolation Forest` for anomaly detection
 
 ### Deep Learning
 
@@ -85,9 +104,32 @@ https://guillermoblancovera.github.io/ai/
 ## How I Use Scripts vs Notebooks
 
 - Scripts are the main source of truth for clean, reviewable implementations.
-- Notebooks are reserved for visual exploration, presentation, and interview walkthroughs.
+- Notebooks are used for visual exploration, compact explanations, and presentation-friendly walkthroughs.
 
 This keeps the repository maintainable while still making it easy to demonstrate ideas interactively.
+
+## Notebook Index
+
+### `notebooks/supervised_models/`
+
+- `linear_regression_diabetes.ipynb`
+- `logistic_regression_breast_cancer.ipynb`
+- `decision_tree_wine.ipynb`
+- `random_forest_wine.ipynb`
+- `support_vector_machine_breast_cancer.ipynb`
+- `gradient_boosting_breast_cancer.ipynb`
+- `naive_bayes_iris.ipynb`
+- `kNN.ipynb`
+
+### `notebooks/unsupervised_ml/`
+
+- `kmeans_iris.ipynb`
+- `agglomerative_clustering_iris.ipynb`
+- `dbscan_moons.ipynb`
+- `gaussian_mixture_iris.ipynb`
+- `pca_iris_visualization.ipynb`
+- `tsne_digits_visualization.ipynb`
+- `isolation_forest_anomaly_detection.ipynb`
 
 ## Quick Start
 

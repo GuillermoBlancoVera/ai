@@ -6,7 +6,7 @@
     <title>Guillermo Blanco Vera | AI Portfolio</title>
     <meta
       name="description"
-      content="Personal AI portfolio with examples across classical machine learning, deep learning, and generative AI."
+      content="Guillermo Blanco Vera's personal AI portfolio and repository index with machine learning, deep learning, and generative AI examples."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -23,32 +23,32 @@
 
         <div class="hero-copy">
           <p class="eyebrow">AI portfolio</p>
-          <h1>Machine learning, deep learning, and generative AI work in one interview-ready repository.</h1>
+          <h1>Guillermo Blanco Vera's AI portfolio and repository index.</h1>
           <p class="intro">
-            This site presents the portfolio behind my personal AI repository: a clean collection of runnable examples,
-            experiments, and implementation patterns across classical ML, neural networks, and LLM workflows.
+            This site is my carta de presentacion and a practical map of the repository: a clean collection of
+            supervised learning notebooks, runnable ML scripts, neural network examples, and generative AI workflows.
           </p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="https://github.com/GuillermoBlancoVera/ai" target="_blank" rel="noreferrer">
               View Repository
             </a>
-            <a class="button button-secondary" href="#featured-work">Explore Examples</a>
+            <a class="button button-secondary" href="#notebook-index">Notebook Index</a>
           </div>
         </div>
 
         <section class="hero-metrics" aria-label="Portfolio highlights">
           <article>
-            <span class="metric-value">4</span>
-            <span class="metric-label">AI tracks</span>
+            <span class="metric-value">5</span>
+            <span class="metric-label">focus areas</span>
           </article>
           <article>
-            <span class="metric-value">12+</span>
-            <span class="metric-label">core examples</span>
+            <span class="metric-value">15</span>
+            <span class="metric-label">supervised and unsupervised notebooks</span>
           </article>
           <article>
             <span class="metric-value">Python</span>
-            <span class="metric-label">scripts first</span>
+            <span class="metric-label">scripts and notebooks</span>
           </article>
         </section>
       </header>
@@ -57,10 +57,20 @@
         <section class="section" id="featured-work">
           <div class="section-heading">
             <p class="eyebrow">Featured work</p>
-            <h2>Examples grouped by problem type, not by buzzwords.</h2>
+            <h2>Examples grouped by problem type so the repo is easy to scan.</h2>
           </div>
 
           <div class="grid four-up">
+            <article class="panel">
+              <h3>Supervised ML</h3>
+              <p>Compact notebooks for classification and regression with familiar scikit-learn datasets.</p>
+              <ul>
+                <li>Linear and Logistic Regression</li>
+                <li>Decision Tree and Random Forest</li>
+                <li>SVM, Gradient Boosting, Naive Bayes, KNN</li>
+              </ul>
+            </article>
+
             <article class="panel">
               <h3>Classical ML</h3>
               <p>Structured-data baselines that show practical model selection and evaluation.</p>
@@ -76,9 +86,9 @@
               <h3>Unsupervised ML</h3>
               <p>Pattern discovery and dimensionality reduction with interpretable small datasets.</p>
               <ul>
-                <li>K-Means on Iris</li>
-                <li>PCA on Iris</li>
-                <li>DBSCAN on synthetic moons</li>
+                <li>K-Means, Agglomerative Clustering, GMM</li>
+                <li>PCA and t-SNE visualizations</li>
+                <li>DBSCAN and Isolation Forest</li>
               </ul>
             </article>
 
@@ -106,7 +116,7 @@
         <section class="section split">
           <div class="section-heading">
             <p class="eyebrow">Approach</p>
-            <h2>Built to be reviewed quickly by hiring teams and discussed deeply in interviews.</h2>
+            <h2>Built as both a personal presentation and a working map of the codebase.</h2>
           </div>
 
           <div class="grid two-up">
@@ -114,7 +124,7 @@
               <h3>Why scripts first</h3>
               <p>
                 The repository treats Python scripts as the main implementation layer so reviewers can inspect logic,
-                imports, model setup, and evaluation without notebook noise.
+                imports, model setup, and evaluation directly.
               </p>
             </article>
 
@@ -128,10 +138,48 @@
           </div>
         </section>
 
+        <section class="section" id="notebook-index">
+          <div class="section-heading">
+            <p class="eyebrow">Notebook index</p>
+            <h2>The current supervised and unsupervised notebooks at a glance.</h2>
+          </div>
+
+          <div class="grid two-up">
+            <article class="panel index-panel">
+              <h3>Supervised models</h3>
+              <p><code>notebooks/supervised_models/</code></p>
+              <ul>
+                <li>linear_regression_diabetes.ipynb</li>
+                <li>logistic_regression_breast_cancer.ipynb</li>
+                <li>decision_tree_wine.ipynb</li>
+                <li>random_forest_wine.ipynb</li>
+                <li>support_vector_machine_breast_cancer.ipynb</li>
+                <li>gradient_boosting_breast_cancer.ipynb</li>
+                <li>naive_bayes_iris.ipynb</li>
+                <li>kNN.ipynb</li>
+              </ul>
+            </article>
+
+            <article class="panel index-panel">
+              <h3>Unsupervised ML</h3>
+              <p><code>notebooks/unsupervised_ml/</code></p>
+              <ul>
+                <li>kmeans_iris.ipynb</li>
+                <li>agglomerative_clustering_iris.ipynb</li>
+                <li>dbscan_moons.ipynb</li>
+                <li>gaussian_mixture_iris.ipynb</li>
+                <li>pca_iris_visualization.ipynb</li>
+                <li>tsne_digits_visualization.ipynb</li>
+                <li>isolation_forest_anomaly_detection.ipynb</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
         <section class="section">
           <div class="section-heading">
             <p class="eyebrow">Repository structure</p>
-            <h2>A small codebase with enough variety to show judgment, breadth, and execution.</h2>
+            <h2>A compact structure for finding scripts, notebooks, and future artifacts.</h2>
           </div>
 
           <div class="repo-layout">
@@ -143,7 +191,7 @@
             <div class="repo-column">
               <span class="repo-label">Notebooks</span>
               <code>notebooks/</code>
-              <p>Presentation-friendly companion notebooks grouped by topic.</p>
+              <p>Supervised, unsupervised, classical ML, deep learning, and generative AI notebook folders.</p>
             </div>
             <div class="repo-column">
               <span class="repo-label">Artifacts</span>
@@ -153,20 +201,6 @@
           </div>
         </section>
 
-        <section class="section cta">
-          <div>
-            <p class="eyebrow">GitHub Pages</p>
-            <h2>This page can be published directly from the repository.</h2>
-            <p>
-              Once GitHub Pages is enabled for the `docs/` folder on `main`, this portfolio can be shared as a public
-              URL alongside the source code.
-            </p>
-          </div>
-
-          <a class="button button-primary" href="https://github.com/GuillermoBlancoVera/ai/settings/pages" target="_blank" rel="noreferrer">
-            Open Pages Settings
-          </a>
-        </section>
       </main>
     </div>
   </body>

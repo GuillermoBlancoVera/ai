@@ -207,7 +207,7 @@ h3 {
 }
 
 .four-up {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
 }
 
 .two-up {
@@ -221,6 +221,10 @@ h3 {
 .panel ul {
   padding-left: 18px;
   margin: 14px 0 0;
+}
+
+.index-panel li {
+  overflow-wrap: anywhere;
 }
 
 .repo-layout {
