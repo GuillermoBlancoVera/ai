@@ -67,6 +67,7 @@ https://guillermoblancovera.github.io/ai/
 │   ├── classical_ml/
 │   ├── deep_learning/
 │   ├── generative_ai/
+│   ├── supervised_models/
 │   └── unsupervised_ml/
 ├── reports/
 │   └── figures/
