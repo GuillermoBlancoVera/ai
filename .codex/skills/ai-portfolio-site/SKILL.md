@@ -9,7 +9,7 @@ Use this skill for work in `docs/`.
 
 ## Purpose
 
-The site is a lightweight GitHub Pages presentation layer for the repository. It should mirror the repo honestly and make a strong first impression in interviews.
+The site is a lightweight GitHub Pages presentation layer and public index for the repository. It should mirror the repo honestly and make the project easy to understand quickly.
 
 ## Workflow
 
@@ -20,6 +20,12 @@ The site is a lightweight GitHub Pages presentation layer for the repository. It
 
 ```bash
 ./scripts/update_skill_references.sh
+```
+
+5. Before committing docs or portfolio-index changes, run:
+
+```bash
+./scripts/check_portfolio_sync.sh
 ```
 
 ## Content rules
@@ -34,4 +40,4 @@ The site is a lightweight GitHub Pages presentation layer for the repository. It
 - adding newly built example categories,
 - refreshing featured examples,
 - improving GitHub Pages presentation,
-- tightening portfolio copy for hiring contexts.
+- tightening portfolio copy as a personal carta de presentacion and repo index.

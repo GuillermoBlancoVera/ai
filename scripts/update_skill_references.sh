@@ -4,6 +4,8 @@ set -euo pipefail
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 repo_map="$repo_root/.codex/skills/ai-portfolio-repo-context/references/repo-map.md"
+tmp_map="$(mktemp)"
+trap 'rm -f "$tmp_map"' EXIT
 
 {
   printf '# Repo Map\n\n'
@@ -13,6 +15,9 @@ repo_map="$repo_root/.codex/skills/ai-portfolio-repo-context/references/repo-map
   find "$repo_root" \
     -path "$repo_root/.git" -prune -o \
     -path "$repo_root/.venv" -prune -o \
+    -path "$repo_root/.pytest_cache" -prune -o \
+    -path "$repo_root/src/ai_portfolio.egg-info" -prune -o \
+    -name .DS_Store -prune -o \
     -name __pycache__ -prune -o \
     -print | sed "s|$repo_root|.|" | sort
   printf '```\n\n'
@@ -22,6 +27,10 @@ repo_map="$repo_root/.codex/skills/ai-portfolio-repo-context/references/repo-map
   printf -- '- `docs/`: GitHub Pages portfolio site\n'
   printf -- '- `.codex/skills/`: repo-local Codex skills\n'
   printf -- '- `scripts/update_skill_references.sh`: refreshes this file\n'
-} > "$repo_map"
+} > "$tmp_map"
+
+chmod 644 "$tmp_map"
+mv -f "$tmp_map" "$repo_map"
+trap - EXIT
 
 printf 'Updated %s\n' "$repo_map"

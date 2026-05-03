@@ -108,6 +108,18 @@ https://guillermoblancovera.github.io/ai/
 
 This keeps the repository maintainable while still making it easy to demonstrate ideas interactively.
 
+## Development Sync Rule
+
+When new examples, notebooks, folders, or portfolio-facing content change, the repo index and Codex skill references should be updated in the same development pass.
+
+Before committing, run:
+
+```bash
+./scripts/check_portfolio_sync.sh
+```
+
+The pre-commit hook also runs this check so commits do not silently drift away from the current repository structure.
+
 ## Notebook Index
 
 ### `notebooks/supervised_models/`

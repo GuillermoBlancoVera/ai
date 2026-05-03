@@ -21,7 +21,7 @@ This repository is a personal AI portfolio, not a course or toy sandbox.
 Priorities:
 
 1. Keep everything in English.
-2. Optimize for interview review and portfolio presentation.
+2. Make the repository work as both a personal presentation and a practical index of its contents.
 3. Prefer clear, runnable scripts as the source of truth.
 4. Use notebooks as presentation layers or exploration companions.
 5. Keep the GitHub Pages site in `docs/` aligned with the repository content.
@@ -37,6 +37,11 @@ Priorities:
 
 3. If portfolio positioning changes, update both `README.md` and `docs/index.html`.
 4. Keep new examples grouped by paradigm under `src/ai_portfolio/`.
+5. Before committing development changes, run:
+
+```bash
+./scripts/check_portfolio_sync.sh
+```
 
 ## Placement rules
 
@@ -54,4 +59,8 @@ Priorities:
 
 ## Maintenance rule
 
-Whenever you change the repo structure in a way that would make the references stale, refresh the skill references before finishing.
+Whenever you change examples, notebooks, folders, or public-facing portfolio content, keep the skill references and index surfaces synchronized before finishing:
+
+- run `./scripts/update_skill_references.sh` after structural changes,
+- update `README.md`, `docs/index.html`, or the relevant notebook README when examples or notebooks change,
+- run `./scripts/check_portfolio_sync.sh` before committing.
