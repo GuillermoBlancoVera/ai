@@ -1,9 +1,14 @@
 # Deep Learning Notebooks
 
-This folder is reserved for notebook versions of the neural network examples.
+Presentation-friendly notebooks for popular deep learning models using PyTorch and torchvision datasets.
 
-Suggested notebooks:
+Included notebooks:
 
 - `mnist_mlp.ipynb`
 - `fashion_mnist_cnn.ipynb`
-- `training_diagnostics.ipynb`
+- `cifar10_cnn.ipynb`
+- `autoencoder_mnist.ipynb`
+- `transfer_learning_cifar10.ipynb`
+- `lstm_sentiment_classification.ipynb`
+
+These notebooks are compact walkthroughs: each one loads data, defines a model, trains it with a training loop, evaluates performance, and records a practical note about when the architecture is useful.
